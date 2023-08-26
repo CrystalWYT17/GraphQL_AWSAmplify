@@ -1,0 +1,7 @@
+{
+  "env": {
+    "mongoDatabase": "GraphQLTesting",
+    "mongoUsername": "WYT17",
+    "mongoUserPassword": "wuttyeetun"
+  }
+}
