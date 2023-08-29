@@ -13,10 +13,6 @@
     "lodash": "^4.17.21",
     "mongoose": "^7.4.5"
   },
-  "engines": {
-    "node": "18.x",
-    "npm": "9.x"
-  },
   "scripts": {
     "start": "node app.js"
   }
