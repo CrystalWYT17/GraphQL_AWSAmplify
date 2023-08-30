@@ -23,7 +23,7 @@ console.log("user ", process.env.mongoUsername);
 mongoose
   .connect(
     `mongodb+srv://${process.env.mongoUsername}:${process.env.mongoUserPassword}@graphqlcluster.vhhygv4.mongodb.net/${process.env.mongoDatabase}?retryWrites=true&w=majority`,
-    { useNewUrlParser: true }
+    { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => {
     app.listen({ port: port }, () => {
