@@ -154,7 +154,7 @@ const RootQuery = new GraphQLObjectType({
       args: { id: { type: GraphQLID } },
 
       resolve(parent, args) {
-        return lodash.find(postData, { id: args.id });
+        // return lodash.find(postData, { id: args.id });
       },
     },
 
