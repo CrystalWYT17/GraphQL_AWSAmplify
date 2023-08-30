@@ -121,13 +121,6 @@ const RootQuery = new GraphQLObjectType({
         // resolve with data
         // get and return from data source
 
-        // let user = {
-        //   id: "345",
-        //   name: "john",
-        //   age: 34,
-        // };
-        // return user;
-
         // return lodash.find(userData, { id: args.id });
         return User.findById(args.id);
       },
