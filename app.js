@@ -8,7 +8,7 @@ const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 8080;
 
-app.use(cors());
+// app.use(cors());
 
 app.use(
   "/graphql",
@@ -23,7 +23,7 @@ console.log("user ", process.env.mongoUsername);
 mongoose
   .connect(
     `mongodb+srv://${process.env.mongoUsername}:${process.env.mongoUserPassword}@graphqlcluster.vhhygv4.mongodb.net/${process.env.mongoDatabase}?retryWrites=true&w=majority&&maxIdleTimeMS=12000`,
-    { useNewUrlParser: true, useUnifiedTopology: false }
+    { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => {
     app.listen({ port: port }, () => {
