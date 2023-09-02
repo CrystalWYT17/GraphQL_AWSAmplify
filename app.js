@@ -20,7 +20,7 @@ app.use(
 
 console.log("user ", process.env.Database_URL);
 
-const url = process.env.Database_URL || process.env.DATABASE_URL;
+const url = process.env.DATABASE_URL;
 
 mongoose
   .connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
