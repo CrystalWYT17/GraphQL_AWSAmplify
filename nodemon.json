@@ -1,5 +1,7 @@
 {
   "env": {
-    "DATABASE_URL": "mongodb+srv://WYT17:wuttyeetun@graphqlcluster.vhhygv4.mongodb.net:27017/GraphQLTesting?retryWrites=true&w=majority"
+    "mongoDatabase": "GraphQLTesting",
+    "mongoUsername": "WYT17",
+    "mongoUserPassword": "wuttyeetun"
   }
 }
