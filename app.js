@@ -18,16 +18,14 @@ app.use(
   })
 );
 
-console.log("user ", process.env.mongoUsername);
+console.log("user ", process.env.Database_URL);
+
+const url = process.env.Database_URL || process.env.DATABASE_URL;
 
 mongoose
-  .connect(
-    `mongodb+srv://${process.env.mongoUsername}:${process.env.mongoUserPassword}@graphqlcluster.vhhygv4.mongodb.net/${process.env.mongoDatabase}?retryWrites=true&w=majority`,
-    { useNewUrlParser: true, useUnifiedTopology: true }
-  )
+  .connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     app.listen({ port: port }, () => {
-      console.log(process.env.mongoUsername);
       console.log("listening request on port 4000");
     });
   })
