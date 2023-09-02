@@ -18,7 +18,7 @@ app.use(
   })
 );
 
-console.log("user ", process.env.Database_URL);
+console.log("user ", process.env.DATABASE_URL);
 
 const url = process.env.DATABASE_URL;
 
